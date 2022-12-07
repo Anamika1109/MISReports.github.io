@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .bg{
+      background-color: #D7C9E7;
+    }
+    #log{
+      border: 2px solid white;
+      padding: 70px 40px;
+      margin-top: 20%;
+      -webkit-box-shadow: 4px 6px 17px 4px rgba(0,0,0,0.75);
+      -moz-box-shadow: 4px 6px 17px 4px rgba(0,0,0,0.75);
+      box-shadow: 4px 6px 17px 4px rgba(0,0,0,0.75);
+    }
+    button{
+      -webkit-box-shadow: 1px 3px 26px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 3px 26px 1px rgba(0,0,0,0.75);
+box-shadow: 1px 3px 26px 1px rgba(0,0,0,0.75);
+    }
+    h1{
+      margin-top: -20px;
+      color: #12A908;
+    }
+    label{
+      color: black;
+      font-size: 15px;
+
+    }
+    img{
+      box-sizing: inherit;
+      border: 3px;
+      margin: auto;
+      border-radius: 30px;
+      border-bottom-right-radius: 0px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid bg">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-xs-12"></div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <form id="log" action="login.php" method="post">
+              <?php if(isset($_GET['error'])) {?>
+                <p class="error">
+              <?php echo $_GET['error']; ?>
+                </p>
+              <?php } ?>
+          <center><b><h1>Login Form for MIS Reports</h1></b>
+          <img src="logo.png"></center>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Email" name="email">
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="Password" class="form-control" placeholder="Password" name="pwd">
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox">Remember me </label>
+          </div>
+          <button type="submit" class="btn btn-success btn-block">Login</button>
+        </form>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MIS Reports</title>
+  <link rel="stylesheet" href="C:\Xampp\htdocs\eteam_Reports\styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .tooltip {
+  position: relative;
+  display: inline-block;
+  }
+  a{
+    color: hotpink;
+    text-decoration: none;
+  }
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #F9E0DF;
+  color: #4C1188;
+  text-align: center;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  padding: 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+  </style>
+</head>
+<body>
+  <center>
+    <head><h1> <img id="logoimg" src="logo.png"><b>Eteam Infoservice Pvt. Ldt.</b></h1> </head>
+  </center>
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-sm-3">     
+      <h3>US Region</h3>
+      <div id="title">
+        <a href="https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapp.powerbi.com%2Fview%3Fr%3DeyJrIjoiNDE4ZjdmYjAtYWE4ZS00MGExLTk4N2MtZWNkODEwOWY3MWY2IiwidCI6ImNkNDU1NzhkLTY4OTUtNDk1MC04OWYxLThjYmMxOWU3MDVjMiJ9&data=05%7C01%7Cbsingh%40eteaminc.com%7Cdd00fe1106f14d5ffb2d08dab68c9ce4%7Ccd45578d6895495089f18cbc19e705c2%7C0%7C0%7C638023012319139837%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=pmBTUiS%2FQMHBV4Sl9rNL5oUlGhnhKCio44XAhaD0Gr4%3D&reserved=0">Productivity Report</a>
+        <span class="desp">Active HC, Shortlisting, Daily Productivity Report and Issued Jobs by Labor Category & Bill Rate Category</span>
+      </div><br>
+      <div id="title">
+        <a href="https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapp.powerbi.com%2Fview%3Fr%3DeyJrIjoiNmZiNzg1ZjYtZjFkNS00NmE3LTkyNGEtOWI5M2QwYjZkZThhIiwidCI6ImNkNDU1NzhkLTY4OTUtNDk1MC04OWYxLThjYmMxOWU3MDVjMiJ9&data=05%7C01%7Cbsingh%40eteaminc.com%7Cdd00fe1106f14d5ffb2d08dab68c9ce4%7Ccd45578d6895495089f18cbc19e705c2%7C0%7C0%7C638023012319139837%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=nnminugOe1ZqSRiwvR9e%2Fw6BVpqyNmTmgbq%2FQHGO8UM%3D&reserved=0">Call Report</a>
+        <span class="desp">Recruiters, SDP & RMs Call Log Report (MTD)</span>
+      </div><br>
+      <div id="title">
+        <a href="https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapp.powerbi.com%2Fview%3Fr%3DeyJrIjoiOWMzZWY3MzQtNTYxYS00NTI1LWI4MGUtNzMxMjFlYjJmMDgyIiwidCI6ImNkNDU1NzhkLTY4OTUtNDk1MC04OWYxLThjYmMxOWU3MDVjMiJ9&data=05%7C01%7Cbsingh%40eteaminc.com%7Cdd00fe1106f14d5ffb2d08dab68c9ce4%7Ccd45578d6895495089f18cbc19e705c2%7C0%7C0%7C638023012319139837%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=pRSpyoToU7Nx3Pg%2BUmPO68nSETyKI11EoYaazRypfnQ%3D&reserved=0">Diva Finacial Report</a>
+        <span class="desp">US Diva Financials Report</span>
+      </div><br>
+    
+    </div>
+
+
+    <div class="col-sm-3">
+      <h3>UK Region</h3>
+      <div id="title">
+        <a href="https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapp.powerbi.com%2Fview%3Fr%3DeyJrIjoiZjljMzIzNjYtOTlhMC00ZGM2LWJiZDctZjg5NjRkODIzZjcwIiwidCI6ImNkNDU1NzhkLTY4OTUtNDk1MC04OWYxLThjYmMxOWU3MDVjMiJ9&data=05%7C01%7Cbsingh%40eteaminc.com%7Cfa490f7e39d44afd1de108dac643f19f%7Ccd45578d6895495089f18cbc19e705c2%7C0%7C0%7C638040292376780183%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=bBRqS2dWplIr6fTDUmkFzYNi2LLy9NsKmE2ymFeyeec%3D&reserved=0">Productivity Report</a>
+        <span class="desp">UK Daily Productivity Report</span>
+      </div><br>
+      <div id="title">
+        <a href="https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapp.powerbi.com%2Fview%3Fr%3DeyJrIjoiNmZiNzg1ZjYtZjFkNS00NmE3LTkyNGEtOWI5M2QwYjZkZThhIiwidCI6ImNkNDU1NzhkLTY4OTUtNDk1MC04OWYxLThjYmMxOWU3MDVjMiJ9&data=05%7C01%7Cbsingh%40eteaminc.com%7Cfa490f7e39d44afd1de108dac643f19f%7Ccd45578d6895495089f18cbc19e705c2%7C0%7C0%7C638040292376936411%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=K4n6zFrL8zqS8wJO9k4L8xj7bR0hTih20uBg0pu%2FTWA%3D&reserved=0">Call Report</a>
+        <span class="desp">Recruiters, SDP & RMs Call Log Report (MTD)</span>
+      </div><br>
+      <div id="title">
+        <a href="https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapp.powerbi.com%2Fview%3Fr%3DeyJrIjoiNWY1OWRiYTUtY2YwYi00OGQ3LTgyNmUtNzhhYjM0MzVjNzkzIiwidCI6ImNkNDU1NzhkLTY4OTUtNDk1MC04OWYxLThjYmMxOWU3MDVjMiJ9%26pageName%3DReportSection&data=05%7C01%7Cbsingh%40eteaminc.com%7Cfa490f7e39d44afd1de108dac643f19f%7Ccd45578d6895495089f18cbc19e705c2%7C0%7C0%7C638040292376936411%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=dJpijOLpbWXVB2FyjXD0bSvHWgONIlfM1ebydS2BL6g%3D&reserved=0">Diva Finacial Report</a>
+        <span class="desp">UK Diva Financials Report</span>
+      </div><br>
+  
+    </div>
+    
+    <div class="col-sm-3">
+      <h3>Apac</h3>   
+      <div id="title">
+        <a href="https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapp.powerbi.com%2Fview%3Fr%3DeyJrIjoiZTdjZTE5OTctOGQ3NS00ZDgyLWI0NzQtZWUzYzM3NWI0ZDA2IiwidCI6ImNkNDU1NzhkLTY4OTUtNDk1MC04OWYxLThjYmMxOWU3MDVjMiJ9&data=04%7C01%7CAnamika%40eteaminc.com%7C00a8a0b3276841ab7ec108d99d40d33c%7Ccd45578d6895495089f18cbc19e705c2%7C0%7C0%7C637713724003319195%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=ADBAZLe2Ek8KSxXgnFaPDOyANY5OcOw0ptpDIPwj%2FAo%3D&reserved=0">Dashboard</a>
+        <span class="desp">APAC Account Activities_Power Bi Dashboard</span>
+      </div><br>     
+      
+    </div>
+    
+
+    <div class="col-sm-3">
+      <h3>High5</h3>     
+      <div id="title">
+        <a href="https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapp.powerbi.com%2Fview%3Fr%3DeyJrIjoiNTUwNmRhNWYtNGU5Ny00YjRmLTkyNTgtZTY5NzlkZTcxN2Y0IiwidCI6ImNkNDU1NzhkLTY4OTUtNDk1MC04OWYxLThjYmMxOWU3MDVjMiJ9&data=05%7C01%7Cbsingh%40eteaminc.com%7C5cd5612a5ffc49573e2608dac72c1d3b%7Ccd45578d6895495089f18cbc19e705c2%7C0%7C0%7C638041289540745235%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=2OU%2F221GHOBYEIeMRmVKM1v45ELZNf%2Bl%2BNZja6ABl2w%3D&reserved=0">Productivity Report</a>
+        <span class="desp"> Daily Productivity Report of High5</span>
+      </div><br>
+      <div id="title">
+        <a href="https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapp.powerbi.com%2Fview%3Fr%3DeyJrIjoiMDlhZGFjZjYtNmM4My00Y2Y2LWI2YzItYTJhZTBhOTJhY2Y4IiwidCI6ImNkNDU1NzhkLTY4OTUtNDk1MC04OWYxLThjYmMxOWU3MDVjMiJ9&data=05%7C01%7Cbsingh%40eteaminc.com%7C5cd5612a5ffc49573e2608dac72c1d3b%7Ccd45578d6895495089f18cbc19e705c2%7C0%7C0%7C638041289540745235%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=T6CGLLUFRSn6ZanuEKUAyXTVDvbUhMcHel9ixWhkmrY%3D&reserved=0">Revenue Report</a>
+        <span class="desp">High5 Dashboard & Revenue Report</span>
+      </div><br>   
+      
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+</html>
