@@ -73,8 +73,7 @@ box-shadow: 1px 3px 26px 1px rgba(0,0,0,0.75);
       
       <div class="col-md-4 col-sm-4 col-xs-12">
         <form id="log" action="login.php" method="post">
-          <center><b>Login Form for MIS Reports</b><br><br>
-          </center>
+          <center><b>Login Form for MIS Reports</b><br><br></center>
           <div class="form-group">
             <label>Email</label>
             <input type="email" class="form-control" placeholder="Email" name="email">
